@@ -1,0 +1,14 @@
+<h1>Stupid Coaching</h1>
+<h2> <%= @answer[:question] %> </h2>
+<%= "——You" %>
+<h3>
+<% if @answer[:question] == "I am going to work" %>
+<%= "Great!" %>
+<% elsif @answer[:question][-1] == "?" %>
+<%=  "Silly question, get dressed and go to work!" %>
+<% else %>
+<%= "I don't care, get dressed and go to work!" %>
+<% end %>
+</h3>
+<%= "——You Coach" %>
+<h4><%= link_to "Add a new question", ask_path %></h4>
